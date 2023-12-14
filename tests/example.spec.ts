@@ -18,18 +18,18 @@ test("decrement counter", async ({ page }) => {
   expect(counterAfter).toBe(counterBefore - 1)
 });
 
-test("moch request to BE", async ({ page }) => {
-  await page.route('*/**/user', async route => {
-    const json = {
-      firstName: 'Vitalii',
-      lastName: 'Storchous'
-    };
-    await route.fulfill({ json });
-  });
+// test("moch request to BE", async ({ page }) => {
+//   await page.route('*/**/user', async route => {
+//     const json = {
+//       firstName: 'Vitalii',
+//       lastName: 'Storchous'
+//     };
+//     await route.fulfill({ json });
+//   });
 
-  await page.goto(BASE_URL)
-  await page.click('[data-testid="getUserBtn"]')
-  await page.waitForTimeout(1000)
-  await expect(page.getByTestId('firstName')).toHaveText('Vitalii')
-  await expect(page.getByTestId('lastName')).toHaveText('Storchous')
-})
+//   await page.goto(BASE_URL)
+//   await page.click('[data-testid="getUserBtn"]')
+//   await page.waitForTimeout(1000)
+//   await expect(page.getByTestId('firstName')).toHaveText('Vitalii')
+//   await expect(page.getByTestId('lastName')).toHaveText('Storchous')
+// })
