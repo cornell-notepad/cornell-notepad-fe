@@ -1,5 +1,5 @@
 module.exports = {
-  exclude: [".next", "babel.config.js"],
+  include: ["app/**"],
   reporter: ["html", "text", "lcov"],
   "check-coverage": true,
   branches: 100,
