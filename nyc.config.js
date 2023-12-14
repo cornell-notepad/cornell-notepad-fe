@@ -1,6 +1,6 @@
 module.exports = {
   include: ["app/**"],
-  reporter: ["html", "text", "lcov"],
+  reporter: ["text", "lcov"],
   "check-coverage": true,
   branches: 100,
   lines: 100,
